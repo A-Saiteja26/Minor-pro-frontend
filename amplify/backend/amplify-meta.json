@@ -1,0 +1,59 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-liveness-dev-193039-authRole",
+      "UnauthRoleArn": "arn:aws:iam::229124343113:role/amplify-liveness-dev-193039-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::229124343113:role/amplify-liveness-dev-193039-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-liveness-dev-193039-deployment",
+      "UnauthRoleName": "amplify-liveness-dev-193039-unauthRole",
+      "StackName": "amplify-liveness-dev-193039",
+      "StackId": "arn:aws:cloudformation:us-east-1:229124343113:stack/amplify-liveness-dev-193039/3f6252b0-e20b-11ee-9ffa-0e38d9d6c7c9",
+      "AmplifyAppId": "d2a59gz39lxlee"
+    }
+  },
+  "auth": {
+    "livenessae318601": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "PHONE_NUMBER"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-liveness-dev-193039-deployment/amplify-cfn-templates/auth/livenessae318601-cloudformation-template.json",
+        "logicalId": "authlivenessae318601"
+      },
+      "lastPushTimeStamp": "2024-03-14T14:08:15.056Z",
+      "output": {
+        "CreatedSNSRole": "arn:aws:iam::229124343113:role/snsae318601193039-dev",
+        "UserPoolId": "us-east-1_1kBhk2JOO",
+        "AppClientIDWeb": "3heg109s9t5mnl00smb0skf9j3",
+        "AppClientID": "60s7be5bf9pv95qjjfpfifbfql",
+        "IdentityPoolId": "us-east-1:435cb1f7-acf6-46bb-a2ef-cf54a2e8115f",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:229124343113:userpool/us-east-1_1kBhk2JOO",
+        "IdentityPoolName": "livenessae318601_identitypool_ae318601__dev",
+        "UserPoolName": "livenessae318601_userpool_ae318601"
+      },
+      "lastPushDirHash": "p4f6Ge52g69PJzqxC6ohWegXDM8="
+    }
+  }
+}

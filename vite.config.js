@@ -8,7 +8,7 @@ import react from '@vitejs/plugin-react'
     proxy: {
 
       '/myapp': {
-        target: 'http://localhost:4032',
+        target: 'https://minor-proj-liveness.onrender.com',
         changeOrigin: true,
       }
       

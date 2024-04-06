@@ -1,0 +1,7 @@
+{
+  "dev": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/home/teja/.amplify/awscloudformation/5KpOA0UYgD"
+  }
+}
