@@ -14,7 +14,7 @@ const AdminLogin = () => {
     const checkJWT = async() => {
         try{
         const token = localStorage.getItem('token');
-        const resp = await axios.post("/myapp/admin/validatejwt" , {token})
+        const resp = await axios.post("https://minor-proj-liveness.onrender.com/myapp/admin/validatejwt" , {token})
         console.log(resp)
         return true;
         }
@@ -73,7 +73,7 @@ const AdminLogin = () => {
     const sendDataToBackend = async (uname, pwd) => {
         try {
             const response = await axios.post(
-                '/myapp/admin/dashboard',
+                'https://minor-proj-liveness.onrender.com/myapp/admin/dashboard',
                 { user: uname, pass: pwd },
                 { headers: { 'Content-Type': 'application/json' } }
             );
