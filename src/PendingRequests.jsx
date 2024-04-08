@@ -12,7 +12,7 @@ function PendingRequests() {
     const [pendingRequests, setPendingRequests] = useState([]);
     const fetchPendingRequests = async () => {
         try {
-            const response = await axios.get('/myapp/admin/view-requests');
+            const response = await axios.get('https://minor-proj-liveness.onrender.com/myapp/admin/view-requests');
             //console.log(response.data)
             
              setPendingRequests(response.data.pendingRequests);
@@ -27,7 +27,7 @@ function PendingRequests() {
     const checkJWT = async() => {
         try{
         const token = localStorage.getItem('token');
-        const resp = await axios.post('/myapp/admin/validatejwt' , {token})
+        const resp = await axios.post('https://minor-proj-liveness.onrender.com/myapp/admin/validatejwt' , {token})
         console.log(resp)
         return true;
         }
@@ -50,7 +50,7 @@ function PendingRequests() {
             console.log(isValid)
             
             console.log("accept all clicked")
-            const response=await axios.post('/myapp/admin/accept', { ids: selectedRequests});
+            const response=await axios.post('https://minor-proj-liveness.onrender.com/myapp/admin/accept', { ids: selectedRequests});
             console.log("from front end",response.data)
             console.log('Request accepted');
             console.log(JSON.stringify(response))
@@ -89,7 +89,7 @@ function PendingRequests() {
             console.log(isValid)
             
             console.log("reject all clicked")
-            const response=await axios.post('/myapp/admin/reject', { ids: selectedRequests});
+            const response=await axios.post('https://minor-proj-liveness.onrender.com/myapp/admin/reject', { ids: selectedRequests});
             console.log('Request accepted');
             fetchPendingRequests()
             console.log(JSON.stringify(response))
@@ -147,7 +147,7 @@ function PendingRequests() {
                 console.log(isValid)
                 if (action === 'accept') {
                     console.log("accept clicked")
-                    const response=await axios.post('/myapp/admin/accept', { ids: [request]});
+                    const response=await axios.post('https://minor-proj-liveness.onrender.com/myapp/admin/accept', { ids: [request]});
                     console.log('Request accepted');
                     //console.log("from react handle submit",response.data);
                     const d=response.data[0].split(" ")
@@ -161,7 +161,7 @@ function PendingRequests() {
                     toast("Image Registered Successfully")}
                     //console.log(JSON.stringify(response))
                 } else {
-                    const response=await axios.post('/myapp/admin/reject', { ids: [request]});
+                    const response=await axios.post('https://minor-proj-liveness.onrender.com/myapp/admin/reject', { ids: [request]});
                     console.log(JSON.stringify(response))
                     console.log('Request rejected');
                     toast('Image Rejected Successfully');

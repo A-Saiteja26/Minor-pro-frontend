@@ -45,7 +45,7 @@ const Recognize = () => {
       
         try {
             const response = await axios.post(
-                '/myapp/employee/mark_attendance',
+                'https://minor-proj-liveness.onrender.com/myapp/employee/mark_attendance',
                 {
                      photoData:imageData 
                 },

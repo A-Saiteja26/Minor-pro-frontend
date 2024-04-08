@@ -48,7 +48,7 @@ const ViewAttendance = () => {
                 const currentDate = new Date();
                 const newStartDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
                 const newEndDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
-                const resp = await axios.get('/myapp/employee/analytics', {
+                const resp = await axios.get('https://minor-proj-liveness.onrender.com/myapp/employee/analytics', {
                     params: {
                         uname: user
                     }

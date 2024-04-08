@@ -8,7 +8,7 @@ function AdminDashboard({ navigation }) {
     const checkJWT = async() => {
         try{
         const token = localStorage.getItem('token');
-        const resp = await axios.post("/myapp/admin/validatejwt" , {token})
+        const resp = await axios.post("https://minor-proj-liveness.onrender.com/myapp/admin/validatejwt" , {token})
         console.log(resp)
         return true;
         }
@@ -49,7 +49,7 @@ function AdminDashboard({ navigation }) {
 
         
         try {
-            const response = await axios.get('/myapp/admin/pending-requests');
+            const response = await axios.get('https://minor-proj-liveness.onrender.com/myapp/admin/pending-requests');
             const data = response.data;
             if (data.success) {
                 const count = data.pendingRequests.length;
@@ -81,7 +81,7 @@ function AdminDashboard({ navigation }) {
         console.log(err)
     }
         try {
-            const response = await axios.get('/myapp/admin/pending-requests');
+            const response = await axios.get('https://minor-proj-liveness.onrender.com/myapp/admin/pending-requests');
             const data = response.data;
             if (data.success) {
                 console.log(data.pendingRequests)
