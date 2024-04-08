@@ -64,7 +64,7 @@ const Register = () => {
     const sendDataToBackend = async (photoData, userData) => {
         try {
             const response = await axios.post(
-                '/myapp/employee/register_request',
+                'https://minor-proj-liveness.onrender.com/myapp/employee/register_request',
                 {
                     userData: userData,
                     image:photoData
